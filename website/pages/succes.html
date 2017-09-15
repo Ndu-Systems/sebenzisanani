@@ -1,0 +1,25 @@
+﻿<style>
+    .succes{
+            background: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 200000;
+        padding-top: 11%;
+    }
+</style>
+<div class="succes">
+    <main class="hoc container clear">
+        <div class="row box boxshadow" style="border-top:3px solid green">
+
+            <h2 style="text-transform:capitalize; color:green">{{success}}</h2>
+            <div class="col-md-6">                           
+                <button type="submit" style="float:right" class="btn btn-default pull-right" ng-click="OK()">Ok</button>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+
+    </main>
+</div>

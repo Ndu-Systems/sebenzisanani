@@ -1,0 +1,92 @@
+﻿<div class="wthree-main-content">
+    <section class="w3-about text-center">
+        <div class="container">
+            <div class="clearfix"></div>
+
+            <div class="row  box boxshadow" style="width:100%;">
+                <div class="col-md-12">
+
+                    <h3 class="w3l-title">Our Clients</h3>
+                    <div class="form-group has-feedback">
+                        <input type="text" class="form-control" placeholder="Search Clients" ng-model="searchClients">
+                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Contact Person</th>
+                                <th>Email</th>
+                                <th>Tel</th>
+                                <th>Province</th>
+                                <th>City</th>
+                                <th>Surbub</th>
+                                <th>Address</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="client in clients | filter:searchClients">
+                                <td>{{client.name}}</td>
+                                <td>{{client.contactperson}}</td>
+                                <td>{{client.email}}</td>
+                                <td>{{client.tel}}</td>
+                                <td>{{client.province}}</td>
+                                <td>{{client.city}}</td>
+                                <td>{{client.surbub}}</td>
+                                <td>{{client.address}}</td>
+                                <td>{{client.status}}</td>
+                                <td><button type="button" class="btn btn-info" ng-click="GetSelected(client)">View</button></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                   
+                    <form>
+                        <h3 class="w3l-title">{{name}}</h3>
+                        <div class="form-group">
+                            <label for="email">Company Name</label>
+                            <input type="text" class="form-control" ng-model="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Contact person</label>
+                            <input type="text" class="form-control" ng-model="contactperson">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" ng-model="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Tel</label>
+                            <input type="text" class="form-control" ng-model="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Province</label>
+                            <input type="text" class="form-control" ng-model="province">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">City</label>
+                            <input type="text" class="form-control" ng-model="city">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Surbub</label>
+                            <input type="text" class="form-control" ng-model="surbub">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Address</label>
+                            <input type="text" class="form-control" ng-model="address">
+                        </div>
+                        <button type="submit" class="btn btn-custom" ng-click="Update()">Update</button>
+                        <button type="submit" class="btn btn-custom" ng-click="Remove()">Remove</button>
+
+                     
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+</div>

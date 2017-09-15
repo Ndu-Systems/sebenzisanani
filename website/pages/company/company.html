@@ -1,0 +1,76 @@
+﻿
+<!--Top section-->          
+  <div class="myslider2">
+                <div class="innerTextSlider2">
+                    <h2 style="text-transform:uppercase">{{companyName}} <a href="" ><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a> </h2>
+                  
+                 
+
+                </div>
+            </div>
+<!--END Top section-->     
+<div class="wthree-main-content">
+        <div class="container">
+
+            <div class="clearfix"></div>
+            <h3 class="w3l-title">Dashboard</h3>
+            <div class="container box boxshadow">
+                <div class="col-md-6 w3l-abt-grid">
+                    <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+                        <a href="#/post-job" class="hi-icon icon"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
+                    </div>
+                    <h4>ADVERTISE NEW VACANCY</h4>
+                </div>
+                <!--<div class="col-md-6 w3l-abt-grid">
+                    <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+                        <a href="#" class="hi-icon icon"><i class="fa fa-pagelines" aria-hidden="true"></i></a>
+                    </div>
+                    <h4>Service 2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. aliquip ex ea commodo consequat.</p>
+                </div>-->
+                <div class="col-md-6 w3l-abt-grid">
+                    <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+                        <a href="#/training" class="hi-icon icon"><i class="fa fa-tasks" aria-hidden="true"></i></a>
+                    </div>
+                    <h4>MANAGE ADVERTS</h4>
+                </div>
+            </div>
+
+
+            <div class="container box boxshadow">
+                <div class="row">
+                    <div class="col-md-6 w3l-abt-grid">
+                        <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+                            <a href="#/training" class="hi-icon icon"><i class="fa fa-tasks" aria-hidden="true"></i></a>
+                        </div>
+                        <h4 style="text-transform:uppercase; text-align:center">Open Adverts</h4>
+
+
+                        <div class="jobsBtn" style="border-left:6px solid green" ng-repeat="openjob in openJobs"  ng-click="GetOpenJob(openjob)">
+                            <a>{{openjob.description}}</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 w3l-abt-grid">
+                        <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+                            <a href="#/training" class="hi-icon icon"><i class="fa fa-tasks" aria-hidden="true"></i></a>
+                        </div>
+                        <h4 style="text-transform:uppercase; text-align:center">Closed Adverts</h4>
+
+                        <div class="jobsBtn" style="border-left:6px solid red" ng-repeat="closejob in closedJobs">
+                            <strong><a>{{closejob.description}}</a></strong>
+                        </div>
+
+                    </div>
+                </div>
+             
+            </div>
+                     </div>
+            <!--<div class="col-md-6 w3l-abt-grid">
+                <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+                    <a href="#" class="hi-icon icon"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+                </div>
+                <h4>Service 4</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. aliquip ex ea commodo consequat.</p>
+            </div>-->
+            <div class="clearfix"></div>
+        </div>

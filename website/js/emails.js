@@ -1,0 +1,1 @@
+﻿var welcome = "As Happy Friday team , we would like to  welcome you as a new member.";

@@ -1,0 +1,75 @@
+﻿ <!--Top section-->
+<div class="myslider3">
+    <div class="innerTextSlider2">
+        <h2 class="w3l-title" style="text-transform:uppercase">{{name}} {{surname}}  <a href="#/logout"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a> </h2>
+    </div>
+</div>
+<!--END Top section--> 
+<div class="wthree-main-content">
+    <section class="w3-about text-center">
+        <div class="container">
+            <div class="clearfix"></div>
+           <h3 class="w3l-title"><a href="#/candidate"><i class="fa fa-edit" aria-hidden="true"></i></a>Update CV</h3>
+            <div class="container box boxshadow">
+                <div class="row">
+                    <div class="col-md-6 w3l-abt-grid">
+                        <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+                            <a href="#/updateCV" class="hi-icon icon"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+                        </div>
+                        <h4>UPDATE CV</h4>
+                    </div>
+                    <div class="col-md-6 w3l-abt-grid">
+                        <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+                            <a href="#/updateCandidate" class="hi-icon icon"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                        </div>
+                        <h4>EDIT PERSONAL INFO</h4>
+                    </div>                                       
+                </div>
+                <br />
+                <div class="row" style="padding-top: 68px;">
+                    <div class="panel panel-default">
+                        <div class="col-md-6">
+                        </div>
+                        <div class="col-md-6">
+                            <form>
+                                <div>
+                                    <div class="form-group has-feedback">
+                                        <input type="text" class="form-control" disabled placeholder="First name" ng-model="name">
+                                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <input type="text" class="form-control" placeholder="Last name" ng-model="surname">
+                                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <input type="email" class="form-control" disabled placeholder="Email" ng-model="email">
+                                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <input type="tel" class="form-control" placeholder="Cell No." ng-model="cell">
+                                        <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="btn btn-success pull-left" ng-click="updateUser()">
+                                        Update
+                                    </p>
+                                    <p class="pull-right">
+                                        {{error}}
+                                    </p>
+                                </div>
+                                <div>
+                                    <a href="#/candidate" class="btn btn-primary pull-right">
+                                        <i class="fa fa-home"></i>
+                                    </a>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+</div>

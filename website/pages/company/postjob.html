@@ -1,0 +1,51 @@
+﻿<div class="wthree-main-content">
+    <section class="w3-about text-center">
+        <div class="container box boxshadow">
+            <div class="clearfix"></div>
+            <h3 class="w3l-title"><i class="fa fa-edit" aria-hidden="true"></i> - POST A NEW JOB</h3>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="form-group has-feedback">
+                       <select  class="form-control" ng-model="catergorty">
+
+                           <option >Information Technology</option>
+                       </select>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <input type="text" class="form-control" placeholder="job title" ng-model="description">
+                        <span class="glyphicon glyphicon-list form-control-feedback"></span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="form-group has-feedback">
+                        <input type="number" class="form-control" placeholder="Expirience required" ng-model="expirience">
+                        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <input type="number" class="form-control" placeholder="Number of positions" ng-model="positions">
+                        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <textarea type="text" class="form-control" placeholder="Comment" ng-model="comment"></textarea>
+                        <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <textarea type="text" class="form-control" placeholder="Where is the Job Located" ng-model="location"></textarea>
+                        <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
+                    </div>
+
+                  
+
+                    <button type="submit" class="btn btn-custom" ng-click="Add()">Add </button>
+                    <br><br><br>
+                    <p style="color:red">{{message}}</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>

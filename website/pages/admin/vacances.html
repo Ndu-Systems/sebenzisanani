@@ -1,0 +1,89 @@
+﻿<div class="wthree-main-content">
+    <section class="w3-about text-center">
+        <div class="container">
+            <div class="clearfix"></div>
+
+            <div class="row  box boxshadow" style="width:100%;">
+                <div class="col-md-12">
+
+                    <h3 class="w3l-title">Jobs</h3>
+                    <div class="form-group has-feedback">
+                        <input type="text" class="form-control" placeholder="Search Clients" ng-model="searchClients">
+                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Catergorty</th>
+                                <th>Description</th>
+                                <th>Expirience</th>
+                                <th>Comment</th>
+                                <th>Positions</th>
+                                <th>Location</th>
+                                <th>Componey Name</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="job in openJobs | filter:searchClients">
+                                <td>{{job.catergorty}}</td>
+                                <td>{{job.description}}</td>
+                                <td>{{job.expirience}}</td>
+                                <td>{{job.comment}}</td>
+                                <td>{{job.positions}}</td>
+                                <td>{{job.location}}</td>
+                                <td>{{job.componeyName}}</td>
+                                <td>{{job.status}}</td>
+                                <td><button type="button" class="btn btn-info" ng-click="GetSelectedJob(job)">View</button></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                   
+                    <form>
+                        <h3 class="w3l-title">{{description}}</h3>
+                        <div class="form-group">
+                            <label for="email">Catergorty</label>
+                            <input type="text" class="form-control" ng-model="catergorty">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Description</label>
+                            <input type="text" class="form-control" ng-model="description">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">expirience</label>
+                            <input type="text" class="form-control" ng-model="expirience">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">comment</label>
+                            <textarea type="text" class="form-control" ng-model="comment"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">location</label>
+                            <textarea type="text" class="form-control" ng-model="location"></textarea>
+                        </div>
+                     
+                        <div class="form-group">
+                            <label for="email">Componey Name</label>
+                            <input type="text" class="form-control" ng-model="componeyName">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Status</label>
+                            <input type="text" class="form-control" ng-model="status">
+                        </div>
+
+                      
+                        <button type="submit" class="btn btn-custom" ng-click="Update()">Update</button>
+                        <button type="submit" class="btn btn-custom" ng-click="Remove()">Remove</button>
+
+                     
+                    </form>
+                </div>
+              
+
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html ng-app="App"> 
+<head>
+
+    <!--Angular js-->  
+    <script src="angulajs/Config.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="angulajs/app.js"></script>
+    <script src="routes/routes.js"></script>
+    <!--controllers-->
+    <script src="js/emails.js"></script>
+    <script src="controllers/HomeController.js"></script>
+    <script src="controllers/accountController.js"></script>
+    <script src="controllers/recruitmentController.js"></script>
+    <script src="controllers/trainingController.js"></script>
+    <script src="controllers/candidateController.js"></script>
+    <script src="controllers/companyController.js"></script>
+    <script src="controllers/coursesController.js"></script>
+    <script src="controllers/adminController.js"></script>
+
+
+    <title>Sebenzisanane</title>
+    <!-- meta-tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="Business Trade a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //meta-tags -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all"> <!-- Style-CSS -->
+    <link href="css/font-awesome.css" rel="stylesheet"> <!-- Font-Awesome-Icons-CSS -->
+    <link href="css/nav.css" rel="stylesheet" type="text/css" media="all"> <!-- Navbar-CSS -->
+    <!-- //Custom-Files -->
+    <!-- Web-Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <!-- //Web-Fonts -->
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
+  
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script> <!-- Default-JavaScript-File -->
+    <script type="text/javascript" src="js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
+    <!-- Navigation-JavaScript -->
+    <script type="text/javascript" src="js/jquery-func.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+    <!--custom scripts-->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <script src="js/owl.carousel.js"></script>
+
+</head>
+<body> 
+   
+    <!-- //Header -->
+    <!-- Header -->
+    <div class="logo-w3layouts">
+        <!--<h1><a href="index.html"><span>SEBENZISANANE</span></a></h1>-->
+        <h1><a href="#/"><span><img src="images/logoq.PNG" style="width:25%;"/></span></a></h1>
+    </div>
+    <!-- Navigation -->
+    <div class="container">
+        <button class="btn-nav">
+            <div class="bar arrow-top-r"></div>
+            <div class="bar arrow-middle-r"></div>
+            <div class="bar arrow-bottom-r"></div>
+        </button>
+        <nav class="nav-container hideNav">
+            <ul class="nav-list">
+                <li class="list-item"><a href="#/"><i class="fa fa-home"></i></a></li>
+                <li class="list-item"><a href="#/recruitment"><i class="fa fa-briefcase"></i></a></li>
+                <li class="list-item"><a href="#/training"><i class="fa fa-tasks"></i></a></li>
+                <li class="list-item"><a href="#/about"><i class="fa fa-info-circle"></i></a></li>
+                <li class="list-item"><a href="#/contact"><i class="fa fa-envelope"></i></a></li>
+                <li class="list-item"><a href="#/user-login"><i class="fa fa-lock"></i></a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <!-- //Navigation -->
+   
+        <div ng-view></div>
+     
+        <!-- footer-starts-here -->
+        <div class="footer-w3l">
+            <div class="container">
+                <div class="footer-grids">
+                    <div class="col-md-4 footer-grid">
+                        <h4>About Us</h4>
+                        <ul> 
+
+                            <li><i class="fa fa-info-circle" style="font-size:24px;"></i><a href="#/about">    SEBENZISANANI - RECRUITMENT</a></li>
+
+                            <li><i class="fa fa-info-circle" style="font-size:24px;"></i><a href="#/about">     SEBENZISANANI - TRAINING</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 footer-grid">
+
+                    </div>
+                    <div class="col-md-4 footer-grid f3">
+                        <h4>Address</h4>
+                        <ul>
+                            <li><i class="fa fa-phone" style="font-size:24px;"></i>       087 060 0301</li>
+                            <li><i class="fa fa-envelope" style="font-size:24px;"></i><a href="nfo@sebenzisanani.co.za">       info@sebenzisanani.co.za</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-ends-here -->
+        <!-- copyright-starts-he re -->
+        <div class="copy-section" style="display:none">
+            <div class="container">
+                <div class="icons-w3l">
+                    <ul>
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a></li>
+                        <li><a class="googleplus" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i><span>Google+</span></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-top">
+                    <p>© 2017 Sebenzisanane.</p>
+                </div>
+            </div>
+        </div>
+        <!-- copyright-ends-here -->
+        <!-- //main-section-ends-here -->
+    <!-- Custom-JavaScript-Files -->
+
+    <script>
+		$(window).load(function() {
+			$(".btn-nav").on("click tap", function() {
+				$(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
+				$(this).toggleClass("animated");
+			});
+		});
+    </script>
+    <!-- //Navigation-JavaScript -->
+    <!--banner Slider starts Here-->
+
+    <script>
+								// You can also use "$(window).load(function() {"
+								$(function () {
+								  // Slideshow 4
+								  $("#slider3").responsiveSlides({
+									auto: true,
+									pager:true,
+									nav:false,
+									speed: 500,
+									namespace: "callbacks",
+									before: function () {
+									  $('.events').append("<li>before event fired.</li>");
+									},
+									after: function () {
+									  $('.events').append("<li>after event fired.</li>");
+									}
+								  });
+
+								});
+    </script>
+
+    <!--banner Slider starts Here-->
+    <!-- required-js-files-->
+    <!-- for-testimonials -->
+
+    <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items : 1,
+							        lazyLoad : true,
+							        autoPlay : true,
+							        navigation : false,
+							        navigationText :  false,
+							        pagination : true,
+							      });
+							    });
+    </script>
+</body>
+</html>
