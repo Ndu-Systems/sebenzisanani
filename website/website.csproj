@@ -118,6 +118,29 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Api\Admin_login.php" />
+    <Content Include="Api\Candidate_Add.php" />
+    <Content Include="Api\Candidate_Get.php" />
+    <Content Include="Api\Candidate_Login.php" />
+    <Content Include="Api\Candidate_Update.php" />
+    <Content Include="Api\Company_Add.php" />
+    <Content Include="Api\Company_Add_Job.php" />
+    <Content Include="Api\Company_Update.php" />
+    <Content Include="Api\conn.php" />
+    <Content Include="Api\error_log" />
+    <Content Include="Api\get.php" />
+    <Content Include="Api\Job_Update.php" />
+    <Content Include="Api\Job_Update_All_DATA.php" />
+    <Content Include="Api\login.php" />
+    <Content Include="Api\Remove.php" />
+    <Content Include="Api\Save_CV_TO_DB.php" />
+    <Content Include="Api\UpdateJob.php" />
+    <Content Include="Api\upload.php" />
+    <Content Include="Api\uploads\1505398100app form.pdf" />
+    <Content Include="Api\uploads\1505398317Nedbank Internet Banking April.pdf" />
+    <Content Include="Api\uploads\1505399707id.pdf" />
+    <Content Include="Api\uploads\1505402997Ndumiso Mthembu CV.docx" />
+    <Content Include="Api\uploads\1505409434AwethuCV.docx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -186,6 +209,7 @@
     <Content Include="pages\admin\dash.html" />
     <Content Include="pages\admin\login.html" />
     <Content Include="pages\candidate\candidate.html" />
+    <Content Include="pages\candidate\dash.html" />
     <Content Include="pages\candidate\updateCV.html" />
     <Content Include="pages\candidate\updateCandidate.html" />
     <Content Include="pages\company\company.html" />

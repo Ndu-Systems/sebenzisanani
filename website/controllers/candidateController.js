@@ -61,7 +61,7 @@
             .success(function (resp) {
                 var expectedDate = new Date();
                 doc = GetHost(resp);
-                  alert(doc);
+                  //alert(doc);
                 var data = {
                     url: doc,
                     id: $scope.id

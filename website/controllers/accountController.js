@@ -109,8 +109,12 @@ app.controller('candidateLoginController', function ($http, $scope, $window) {
 });
 app.controller('logoutController', function ($http, $scope, $window) {
     localStorage.clear();
-    $window.location.href = $location.absUrl();
+    $window.location.href = "#/";
 });
+//app.controller('logoutController', function ($http, $scope, $window) {
+//    localStorage.clear();
+//    $window.location.href = $location.absUrl();
+//});
 app.controller('companyRegisterController', function ($http, $scope, $window) {
     $scope.message = undefined;
     $scope.Register = function () {
@@ -253,10 +257,7 @@ app.controller('registerController', function ($http, $scope, $window) {
     }
 });
 
-app.controller('logoutController', function ($http, $scope, $window) {
-    localStorage.clear();
-    $window.location.href = "#/";
-});
+
 app.controller('registerCandidateController', function ($http, $scope, $window) {
     $scope.message = undefined;
 

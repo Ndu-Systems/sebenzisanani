@@ -1,10 +1,10 @@
 ﻿<div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
+    <!--<ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+    </ol>-->
 
     <!-- Wrapper for slides -->
     <!--<div class="carousel-inner">
@@ -21,26 +21,28 @@
 
     </div>-->
     <style>
-        .myslider{
-            background-image:url("images/q.PNG");
-             /* Set a specific height */
-        min-height: 900px; 
+               .myslider{
+                        background-image:url("images/q.PNG");
+                         /* Set a specific height */
+                    min-height: 900px; 
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position:relative;
-}
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position:relative;
+            }
             
         .innerTextSlider{
             position:absolute;
             color:white;
             font-family:'Century Gothic' !important;
             position: absolute;
-            left: 18%;
+            left: 26%;
             bottom: 34%;
+            padding-bottom: 9%;
+            text-align: center;
         }
         .innerTextSlider h1{
                         font-family:'Century Gothic' !important;
@@ -56,46 +58,190 @@
             color:white;
         }
         .homebox{
-      font-size: 200%;
-    background: rgba(0, 0, 0, 0.42);
-    padding: 2%;
-    width: 40%;
-    float: left;
-    margin: 5%;
-    cursor:pointer;
-    transition: all 0.5s ease;
+        font-size: 200%;
+        background: rgba(0, 0, 0, 0.42);
+        padding: 2%;
+        width: 40%;
+        float: left;
+        margin: 5%;
+        cursor:pointer;
+        transition: all 0.5s ease;
 
         }
         .homebox:hover{
- font-size: 220%;
- border-bottom:2px solid rgba(0, 139, 255, 0.67);
-        }
+         font-size: 220%;
+         border-bottom:2px solid rgba(0, 139, 255, 0.67);
+         }
+        /*this the welcome animation*/ 
+        
+           .welcome body{             
+              font-family: 'Century Gothic' !important;
+            }
+           .welcome h4{
+                color:#fff;
+            }
+          .welcome svg {
+                display: block;
+                font: 10.5em 'Roboto';
+                font-family: 'Roboto', sans-serif;
+                width: 960px;
+                height: 300px;
+                margin: 0 auto;
+            }
+           .welcome2 body{             
+              font-family: 'Century Gothic' !important;
+            }
+           .welcome2 h4{
+                color:#fff;
+            }
+          .welcome2 svg {
+                display: block;
+                font: 10.5em 'Roboto';
+                font-family: 'Roboto', sans-serif;
+                width: 960px;
+                height: 300px;
+                margin: 0 auto;
+            }
+            .web-coder-skull {
+                fill: none;
+                stroke: white;
+                stroke-dasharray: 6% 29%;
+                stroke-width: 5px;
+                stroke-dashoffset: 0%;
+                animation: stroke-offset 5.5s infinite linear;
+            }
+
+            .web-coder-skull:nth-child(6){
+                stroke: #263238;
+	            animation-delay: -1;
+            }
+
+            .web-coder-skull:nth-child(2){
+	            stroke: #26abe2;
+	            animation-delay: -2s;
+            }
+
+            .web-coder-skull:nth-child(3){
+	            stroke: orange;
+	            animation-delay: -3s;
+            }
+
+            .web-coder-skull:nth-child(4){
+	            stroke: red;
+	            animation-delay: -4s;
+            }
+
+            .web-coder-skull:nth-child(5){
+	            stroke: #fff;
+	            animation-delay: -5s;
+            }
+            .web-coder-skull:nth-child(1){ 
+            stroke: green;
+            animation-delay: -1s;
+            }
+
+            @keyframes stroke-offset{
+	            100% {stroke-dashoffset: -35%;}
+            }
+          /*Ends the welcome animation*/ 
+          /*this the color swatches*/ 
+           
+            .animate li{
+                     margin: 10px 10px 10px 10px;
+                    -webkit-transform: scale(1, 1);
+                    -ms-transform: scale(1, 1);
+                    transform: scale(1, 1);
+                    transition-duration: 0.3s;
+                    -webkit-transition-duration: 0.3s; /* Safari */
+            }
+
+            .animate li:hover{
+                	cursor: pointer;
+	                -webkit-transform: scale(2, 2);
+                    -ms-transform: scale(2, 2);
+                    transform: scale(2, 2);
+                    transition-duration: 0.3s;
+                    -webkit-transition-duration: 0.3s; /* Safari */
+                    box-shadow: 10px 10px 5px #888888;
+                    z-index: 1;
+            }
+           /*end the color swatches*/ 
 
     </style>
 
- <div class="myslider">
-     <div class="innerTextSlider">
-         <h1>Recruitement and training company</h1>
-         <h2>SEBENZISANANE</h2>
-         <a  href="#/recruitment"><div class="homebox homebox1">RECRUITEMENT</div></a>
-         <a  href="#/training"><div class="homebox homebox2">TRAINING</div></a>
-
-     </div>
+ <div class="myslider container-fluid">
+     <div class="innerTextSlider"> 
+          <div class="welcome">
+              <svg viewBox="0 0 1000 250">
+                  <symbol id="welcome-animated">
+                      <text text-anchor="middle" x="50%" y="70%">Welcome</text>
+                  </symbol>
+                  <g class="webcoderskull">
+                      <use xlink:href="#welcome-animated" class="web-coder-skull"></use>
+                      <use xlink:href="#welcome-animated" class="web-coder-skull"></use>
+                      <use xlink:href="#welcome-animated" class="web-coder-skull"></use>
+                      <use xlink:href="#welcome-animated" class="web-coder-skull"></use>
+                      <use xlink:href="#welcome-animated" class="web-coder-skull"></use>
+                  </g>
+              </svg>
+          </div>  
+           <h1>TO</h1>
+         <h2>SEBENZISANANI</h2>  
+            <!--<a href="#/recruitment"><div class="homebox homebox1">RECRUITEMENT</div></a>
+             <a href="#/training"><div class="homebox homebox2">TRAINING</div></a>-->           
+     </div> 
+      <div class="row animate" style="padding-top: 32%;">    
+            
+              <ul class="thumbnails">
+                  <li class="col-md-2 col-sm-12">                     
+                  </li>
+                  <li class="col-md-2 col-sm-12">
+                      <div class="thumbnail img-rounded">
+                          <img src="http://placehold.it/320x200" alt="ALT NAME">
+                          <div class="caption">
+                              <h3>Header Name</h3>
+                              <p>Description</p>
+                              <p align="center"><a href="#/" class="btn btn-primary btn-block">Open</a></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="col-md-2 col-sm-12">
+                      <div class="thumbnail img-rounded">
+                          <img src="http://placehold.it/320x200" alt="ALT NAME">
+                          <div class="caption">
+                              <h3>Header Name</h3>
+                              <p>Description</p>
+                              <p align="center"><a href="#/" class="btn btn-primary btn-block">Open</a></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="col-md-2 col-sm-12">
+                      <div class="thumbnail img-rounded">
+                          <img src="http://placehold.it/320x200" alt="ALT NAME">
+                          <div class="caption">
+                              <h3>Header Name</h3>
+                              <p>Description</p>
+                              <p align="center"><a href="#/" class="btn btn-primary btn-block">Open</a></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="col-md-2 col-sm-12">
+                      <div class="thumbnail img-rounded">
+                          <img src="http://placehold.it/320x200" alt="ALT NAME">
+                          <div class="caption">
+                              <h3>Header Name</h3>
+                              <p>Description</p>
+                              <p align="center"><a href="#/" class="btn btn-primary btn-block">Open</a></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="col-md-2 col-sm-12">
+                  </li>          
+              </ul>  
+          </div>           
  </div>
-
-
-
-        <!-- Left and right controls -->
-        <!--<p class="left carousel-control" data-target="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-        </p>
-        <p class="right carousel-control" data-target="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-        </p>
-    </div>-->
-<div class="wthree-main-content">
+     
+<!--<div class="wthree-main-content">
     <section class="w3-about text-center">
         <div class="container">      
 
@@ -109,13 +255,6 @@
                         <h4>RECRUITEMENT PORTAL</h4>
                         <p>Upload your CV and Personal Details<br />If you hiring <strong>POST</strong> A Job</p>
                     </div>
-                    <!--<div class="col-md-6 w3l-abt-grid">
-                        <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-                            <a href="#" class="hi-icon icon"><i class="fa fa-pagelines" aria-hidden="true"></i></a>
-                        </div>
-                        <h4>Service 2</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. aliquip ex ea commodo consequat.</p>
-                    </div>-->
                     <div class="col-md-6 w3l-abt-grid">
                         <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
                             <a href="#/training" class="hi-icon icon"><i class="fa fa-tasks" aria-hidden="true"></i></a>
@@ -124,15 +263,8 @@
                         <p>View Courses on offer and <strong>Request</strong> Training for your Business</p>
                     </div>
                 </div>
-            <!--<div class="col-md-6 w3l-abt-grid">
-                <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-                    <a href="#" class="hi-icon icon"><i class="fa fa-laptop" aria-hidden="true"></i></a>
-                </div>
-                <h4>Service 4</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. aliquip ex ea commodo consequat.</p>
-            </div>-->
-            <div class="clearfix"></div>
+           <div class="clearfix"></div>
         </div>
     </section>
-</div>
-<!-- //service-ends-here -->
+</div>-->
+ 
