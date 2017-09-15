@@ -32,7 +32,7 @@
             })
             .when('/candidate', {
                 templateUrl: 'pages/candidate/candidate.html',
-                controller: 'candidateController'
+                controller: 'candidate1Controller'
             })
             .when('/updateCandidate', {
                 templateUrl: 'pages/candidate/updateCandidate.html',
@@ -93,5 +93,13 @@
      .when('/Our-Candidates', {
          templateUrl: 'pages/admin/candidates.html',
          controller: 'candidatesController'
+     })
+     .when('/Register-With-Us', {
+         templateUrl: 'pages/account/registerCandidate.html',
+         controller: 'registerCandidateController'
+     })
+     .when('/Candidate-Dashboard', {
+         templateUrl: 'pages/candidate/dash.html',
+         controller: 'candidateController'
      })
 });

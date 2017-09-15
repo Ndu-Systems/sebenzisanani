@@ -1,9 +1,13 @@
 ﻿app.controller('companyController', function ($http, $scope, $window) {
+    if (localStorage.getItem("isCompanyLoggedIn") !== "true") {
+        $window.location.href = "#login";
+    }
     $scope.companyName = localStorage.getItem("companyName");
     // get open jobs
+    $scope.id = localStorage.getItem("companyId");
     var data = {
         table: "job",
-        condition: "status = 'Open'"
+        condition: "status = 'Open' AND componeyId = " + $scope.id
     };
     $http.post(GetApiUrl("get"), data)
     .success(function (response, status) {
@@ -14,7 +18,7 @@
     //get closed jobs
     var data = {
         table: "job",
-        condition: "status = 'Closed'"
+        condition: "status = 'Closed' AND componeyId = " + $scope.id
     };
     $http.post(GetApiUrl("get"), data)
     .success(function (response, status) {
@@ -28,7 +32,7 @@
     };
 });
 app.controller('postjobController', function ($http, $scope, $window) {
-    if (localStorage.getItem("isLoggedIn") !== "true") {
+    if (localStorage.getItem("isCompanyLoggedIn") !== "true") {
         $window.location.href = "#/";
     }
     $scope.Add = function () {

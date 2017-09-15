@@ -41,7 +41,7 @@ body a:focus, a:hover {
       font-family: 'Century Gothic' !important;
 }
  .myslider2 {
-                    background-image: url("../../images/b2.PNG");
+                    background-image: url("../images/b2.PNG");
                     /* Set a specific height */
                     min-height: 500px;
                     /* Create the parallax scrolling effect */
@@ -2504,5 +2504,13 @@ h3.w3l-title, .team h3, h2.title-w3 {
 }
 }
 
-
-/*-- //Responsive-ends-here --*/
+@media screen and (min-width: 480px) {
+   .innerTextSlider h1 {
+    font-family: 'Century Gothic' !important;
+    font-size: 125%;
+}
+   .innerTextSlider h2 {
+    font-family: 'Century Gothic' !important;
+    font-size: 206%;
+}
+}

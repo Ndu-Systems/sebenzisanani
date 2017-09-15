@@ -1,1 +1,1 @@
-﻿var welcome = "As Happy Friday team , we would like to  welcome you as a new member.";
+﻿var welcome = "As Sebenzisanane team , we would like to  welcome you as a new member.";

@@ -6,7 +6,7 @@
             <div class="row  box boxshadow" style="width:100%;">
                 <div class="col-md-12">
 
-                    <h3 class="w3l-title">Jobs</h3>
+                    <h3 class="w3l-title">Our Candidates</h3>
                     <div class="form-group has-feedback">
                         <input type="text" class="form-control" placeholder="Search Clients" ng-model="searchClients">
                         <span class="glyphicon glyphicon-search form-control-feedback"></span>
@@ -19,7 +19,6 @@
                                 <th>surname</th>
                                 <th>email</th>
                                 <th>cell</th>
-                                <th>identity</th>
                                 <th>title</th>
                                 <th>jobCatergory</th>
                                 <th>jobTitle</th>
@@ -27,6 +26,7 @@
                                 <th>expirience</th>
                                 <th>cv</th>
                                 <th>city</th>
+                                <th></th>
                             </tr>
                         </thead>
                        
@@ -36,13 +36,12 @@
                                 <td>{{candidate.surname}}</td>
                                 <td>{{candidate.email}}</td>
                                 <td>{{candidate.cell}}</td>
-                                <td>{{candidate.identity}}</td>
                                 <td>{{candidate.title}}</td>
                                 <td>{{candidate.jobCatergory}}</td>
                                 <td>{{candidate.jobTitle}}</td>
                                 <td>{{candidate.jobDescription}}</td>
                                 <td>{{candidate.expirience}}</td>
-                                <td>{{candidate.cv}}</td>
+                                <td><a href="{{candidate.cv}}" target="_blank">View</a></td>
                                 <td>{{candidate.city}}</td>
                                 <td><button type="button" class="btn btn-info" ng-click="GetSelectedJob(candidate)">View</button></td>
                             </tr>
@@ -51,57 +50,75 @@
                     </table>
                     <form>
                         <h3 class="w3l-title">{{name}} {{surname}}</h3>
-                        <div class="form-group">
-                            <label for="email">name</label>
-                            <input type="text" class="form-control" ng-model="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">surname</label>
-                            <input type="text" class="form-control" ng-model="surname">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">email</label>
-                            <input type="text" class="form-control" ng-model="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">cell</label>
-                            <input type="text" class="form-control" ng-model="cell">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">identity</label>
-                            <input type="text" class="form-control" ng-model="identity">
-                        </div>
-                     
-                        <div class="form-group">
-                            <label for="email">title </label>
-                            <input type="text" class="form-control" ng-model="title">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">jobCatergory</label>
-                            <input type="text" class="form-control" ng-model="jobCatergory">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">jobTitle</label>
-                            <input type="text" class="form-control" ng-model="jobTitle">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">jobDescription</label>
-                            <input type="text" class="form-control" ng-model="jobDescription">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">expirience</label>
-                            <input type="text" class="form-control" ng-model="expirience">
-                        </div>
+                        <table class="table">
 
-                        <div class="form-group">
-                            <label for="email">CV</label>
-                            <input type="text" class="form-control" ng-model="cv">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">city</label>
-                            <input type="text" class="form-control" ng-model="city">
-                        </div>
+                            <tbody>
+                                <tr>
+                                    <td><b>Name</b></td>
+                                    <td>
+                                        <input type="text" class="form-control" ng-model="name">
+                                    </td>
 
+                                </tr>
+                                <tr>
+                                    <td><b>Surname</b></td>
+                                    <td>
+                                        <input type="text" class="form-control" ng-model="surname">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Email Address</b></td>
+                                    <td>
+                                        <input type="text" class="form-control" ng-model="email">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Title</b></td>
+                                    <td>
+                                        <input type="text" class="form-control" ng-model="title">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Job Catergory</b></td>
+                                    <td>
+                                        <input type="text" class="form-control" ng-model="jobCatergory">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Job Title</b></td>
+                                    <td>
+                                        <input type="text" class="form-control" ng-model="jobTitle">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Job Description</b></td>
+                                    <td>
+                                        <input type="text" class="form-control" ng-model="jobDescription">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Expirience (Years)</b></td>
+                                    <td>
+                                        <input type="text" class="form-control" ng-model="expirience">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>City</b></td>
+                                    <td>
+                                        <input type="text" class="form-control" ng-model="city">
+                                    </td>
+
+                                </tr>
+                          
+                            </tbody>
+                        </table>
 
                       
                         <button type="submit" class="btn btn-custom" ng-click="Update()">Update</button>

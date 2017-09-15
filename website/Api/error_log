@@ -1,0 +1,3 @@
+[14-Sep-2017 15:13:54 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'ndusys0_sebenza'@'localhost' (using password: YES) in /home/ndusys0/public_html/demo/03/Api/conn.php on line 15
+[14-Sep-2017 15:15:17 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'ndusys0_sebenza'@'localhost' (using password: YES) in /home/ndusys0/public_html/demo/03/Api/conn.php on line 15
+[14-Sep-2017 15:15:18 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'ndusys0_sebenza'@'localhost' (using password: YES) in /home/ndusys0/public_html/demo/03/Api/conn.php on line 15

@@ -1,0 +1,115 @@
+﻿<!--Top section-->
+<div class="myslider2">
+    <div class="innerTextSlider2">
+        <h2 style="text-transform:uppercase">Hi {{name}}  </h2>
+
+
+
+    </div>
+</div>
+<!--END Top section-->
+<div class="wthree-main-content">
+    <div class="container">
+        <div class="clearfix"></div>
+        <h3 class="w3l-title">Dashboard</h3>
+        <div class="container box boxshadow">
+            <div class="row">
+               
+                <div class="alert alert alert-info">
+                    <strong>{{warning}}</strong>
+                    <br><br>
+                  
+                    <span class="btn btn-default btn-file">
+                        <input type="file" class="fileUpload" onchange="angular.element(this).scope().filesChanged(this)" />
+                    </span> 
+                    <br>
+                    <input type="button" ng-click="UploadCV()" class="btn btn-success" value="Upload CV" /> {{error}}
+                </div>
+                <table class="table">
+                 
+                    <tbody>
+                        <tr>
+                            <td><b>Name</b></td>
+                            <td>
+                                <input type="text" class="form-control" ng-model="name">
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            <td><b>Surname</b></td>
+                            <td>
+                                <input type="text" class="form-control" ng-model="surname">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Email Address</b></td>
+                            <td>
+                                <input type="text" class="form-control" ng-model="email">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Title</b></td>
+                            <td>
+                                <input type="text" class="form-control" ng-model="title">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Job Catergory</b></td>
+                            <td>
+                                <input type="text" class="form-control" ng-model="jobCatergory">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Job Title</b></td>
+                            <td>
+                                <input type="text" class="form-control" ng-model="jobTitle">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Job Description</b></td>
+                            <td>
+                                <input type="text" class="form-control" ng-model="jobDescription">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Expirience (Years)</b></td>
+                            <td>
+                                <input type="text" class="form-control" ng-model="expirience">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><b>City</b></td>
+                            <td>
+                                <input type="text" class="form-control" ng-model="city">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><b>My CV</b></td>
+                            <td>
+                                <a href="{{cv}}" target="_blank"><button type="button" class="btn btn-primary">View</button></a>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="submit" class="btn btn-custom" >Update</button>
+
+            </div>
+
+
+
+        </div>
+
+     
+    </div>
+  
+    <div class="clearfix"></div>
+</div>
