@@ -203,6 +203,7 @@
     <Content Include="pages\account\login.html" />
     <Content Include="pages\account\logout.html" />
     <Content Include="pages\account\register.html" />
+    <Content Include="pages\account\registerCandidate.html" />
     <Content Include="pages\admin\candidates.html" />
     <Content Include="pages\admin\vacances.html" />
     <Content Include="pages\admin\clients.html" />
@@ -219,7 +220,8 @@
     <Content Include="pages\courses\courses.html" />
     <Content Include="pages\Home\contact.html" />
     <Content Include="pages\Home\index.html" />
-    <Content Include="pages\recruitment\recruitment.html" />
+    <Content Include="pages\recruitment\candidateLanding.html" />
+    <Content Include="pages\recruitment\companyLanding.html" />
     <Content Include="pages\succes.html" />
     <Content Include="pages\training\training.html" />
     <Content Include="routes\routes.js" />

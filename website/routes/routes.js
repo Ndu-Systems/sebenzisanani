@@ -22,10 +22,14 @@
                 templateUrl: 'pages/account/companyRegister.html',
                 controller: 'companyRegisterController'
             })
-            .when('/recruitment', {
-                templateUrl: 'pages/recruitment/recruitment.html',
+            .when('/candidateLanding', {
+                templateUrl: 'pages/recruitment/candidateLanding.html',
                 controller: 'recruitmentController'
             })
+            .when('/companyLanding', {
+                  templateUrl: 'pages/recruitment/companyLanding.html',
+                  controller: 'recruitmentController'
+              })
             .when('/training', {
                 templateUrl: 'pages/training/training.html',
                 controller: 'trainingController'
