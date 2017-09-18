@@ -209,6 +209,7 @@
     <Content Include="pages\admin\clients.html" />
     <Content Include="pages\admin\dash.html" />
     <Content Include="pages\admin\login.html" />
+    <Content Include="pages\candidate\apply.html" />
     <Content Include="pages\candidate\candidate.html" />
     <Content Include="pages\candidate\dash.html" />
     <Content Include="pages\candidate\job.html" />

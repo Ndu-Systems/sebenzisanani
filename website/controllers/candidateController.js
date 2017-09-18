@@ -242,10 +242,66 @@ app.controller('jobDetailsController', function ($http, $scope, $window) {
     $scope.componeyName = $scope.job.componeyName;
     $scope.date = $scope.job.date;
 
-    // apply
 
     $scope.Appy = function () {
+        $window.location.href = "#Apply";
+        if (localStorage.getItem("isCandidateLoggedIn") === "true") {
+            $window.location.href = "#candidateLogin";
+        } else {
 
+        }
     }
+});
+app.controller('applyController', function ($http, $scope, $window) {
+
+    $scope.job = JSON.parse(localStorage.getItem("jobSelectedJob"));
+
+    $scope.id = $scope.job.id;
+    $scope.catergorty = $scope.job.catergorty;
+    $scope.description = $scope.job.description;
+    $scope.expirience = $scope.job.expirience;
+    $scope.comment = $scope.job.comment;
+    $scope.componeyId = $scope.job.componeyId;
+    $scope.positions = $scope.job.positions;
+    $scope.status = $scope.job.status;
+    $scope.location = $scope.job.location;
+    $scope.componeyName = $scope.job.componeyName;
+    $scope.date = $scope.job.date;
+
+    $scope.Login = function () {
+        $scope.message = undefined;
+        var email = $scope.email;
+        var password = $scope.password;
+        if (email !== undefined) {
+            var data = {
+                email: email,
+                password: password
+            };
+
+            $http.post(GetApiUrl("Candidate_Login"), data)
+            .success(function (response, status) {
+                if (response !== undefined && response.length !== 0) {
+                    var user = response.candidate[0];
+                    localStorage.setItem("candidate_name", user.name);
+                    localStorage.setItem("candidate_id", user.id);
+                    localStorage.setItem("candidate_identity", user.identity);
+                    email: localStorage.setItem("candidate_email", user.email);
+                    localStorage.setItem("candidate_cv", user.cv);
+                    localStorage.setItem("isCandidateLoggedIn", true);
+                    // seuccess
+                    localStorage.setItem("succes", "You Application was sent, We will contact you as soon as possible");
+                    localStorage.setItem("url", "#Candidate-Dashboard");
+                    $window.location.href = "#succes";
+
+                    me.message = undefined;
+                }
+                else {
+                    $scope.message = "Your login credentials were not correct, please try again.";
+                }
+            });
+        } else {
+            $scope.message = "Email is invalid!";
+        }
+    };
 });
 
