@@ -82,6 +82,7 @@
 
 });
 app.controller('ourClintsController', function ($http, $scope, $window) {
+    $scope.name = localStorage.getItem("adminName");
     //get  clients
     var data3 = {
         table: "company",
@@ -195,7 +196,7 @@ app.controller('ourClintsController', function ($http, $scope, $window) {
 
 });
 app.controller('vacancesController', function ($http, $scope, $window) {
-
+    $scope.name = localStorage.getItem("adminName");
     // get  jobs
     var data = {
         table: "job",
@@ -210,10 +211,10 @@ app.controller('vacancesController', function ($http, $scope, $window) {
             $scope.JobsCount = 0;
         }
     });
-
-
+    $scope.show = false;
+   
     // selected client
-    $scope.GetSelectedJob = function (job) {
+    $scope.GetSelectedJob = function (job) {       
         $scope.catergorty = job.catergorty;
         $scope.description = job.description;
         $scope.expirience = job.expirience;
@@ -222,8 +223,24 @@ app.controller('vacancesController', function ($http, $scope, $window) {
         $scope.location = job.location;
         $scope.componeyName = job.componeyName;
         $scope.status = job.status;
-        $scope.id = job.id;
+        $scope.id = job.id;       
+        $scope.show = true;
     };
+
+    $scope.JobInterview = function (job) {
+        localStorage.setItem("catergorty", job.catergorty);
+        localStorage.setItem("description", job.description);
+        localStorage.setItem("expirience", job.expirience);
+        localStorage.setItem("comment", job.comment);
+        localStorage.setItem("positions", job.positions);
+        localStorage.setItem("location", job.location);
+        localStorage.setItem("componeyName", job.componeyName);
+        localStorage.setItem("componeyName", job.componeyName);
+        localStorage.setItem("status", job.status);
+        localStorage.setItem("id", job.id);
+        $scope.show = false;
+        $window.location.href = "#linkToInterview"
+    }
 
     // Update
     $scope.Update = function () {
@@ -235,8 +252,6 @@ app.controller('vacancesController', function ($http, $scope, $window) {
         var location = $scope.location;
         var componeyName = $scope.componeyName;
         var status = $scope.status;
-
-
         if (description === undefined) {
             $scope.message = "enter job description";
         }
@@ -252,7 +267,6 @@ app.controller('vacancesController', function ($http, $scope, $window) {
                 componeyName: componeyName,
                 id: $scope.id,
                 status: status
-
 
             };
 
@@ -305,7 +319,7 @@ app.controller('vacancesController', function ($http, $scope, $window) {
 
 });
 app.controller('candidatesController', function ($http, $scope, $window) {
-
+    $scope.name = localStorage.getItem("adminName");
     //get  candidates
     var data2 = {
         table: "candidate",

@@ -1,4 +1,9 @@
-﻿<div class="wthree-main-content">
+﻿<div class="myslider2">
+    <div class="innerTextSlider2">
+        <h2 style="text-transform:uppercase">{{name}} <a href="#/logout">Log-out</a> </h2>
+    </div>
+</div>
+<div class="wthree-main-content">
     <section class="w3-about text-center">
         <div class="container">
             <div class="clearfix"></div>
@@ -6,12 +11,11 @@
             <div class="row  box boxshadow" style="width:100%;">
                 <div class="col-md-12">
 
-                    <h3 class="w3l-title">Our Candidates</h3>
+                    <h3 class="w3l-title"><a href="#/admin-dashboard">Our Candidates</a></h3>
                     <div class="form-group has-feedback">
                         <input type="text" class="form-control" placeholder="Search Clients" ng-model="searchClients">
                         <span class="glyphicon glyphicon-search form-control-feedback"></span>
                     </div>
-
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -28,8 +32,7 @@
                                 <th>city</th>
                                 <th></th>
                             </tr>
-                        </thead>
-                       
+                        </thead>                       
                         <tbody>
                             <tr ng-repeat="candidate in candidates | filter:searchClients">
                                 <td>{{candidate.name}}</td>

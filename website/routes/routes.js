@@ -114,4 +114,8 @@
           templateUrl: 'pages/candidate/apply.html',
           controller: 'applyController'
       })
+    .when('/linkToInterview', {
+        templateUrl: 'pages/admin/LinkToInterview.html',
+        controller: 'linkToInterviewtController'
+    })
 });

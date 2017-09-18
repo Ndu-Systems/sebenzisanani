@@ -141,6 +141,7 @@
     <Content Include="Api\uploads\1505399707id.pdf" />
     <Content Include="Api\uploads\1505402997Ndumiso Mthembu CV.docx" />
     <Content Include="Api\uploads\1505409434AwethuCV.docx" />
+    <Content Include="Api\Job_SelectAllForCompany.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

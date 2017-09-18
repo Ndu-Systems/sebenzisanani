@@ -1,4 +1,10 @@
-﻿<div class="wthree-main-content">
+﻿<!--Top section-->
+<div class="myslider2">
+    <div class="innerTextSlider2">
+        <h2 style="text-transform:uppercase">{{name}} <a href="#/logout">Log-out</a> </h2>
+    </div>
+</div>
+<div class="wthree-main-content">
     <section class="w3-about text-center">
         <div class="container">
             <div class="clearfix"></div>
@@ -6,12 +12,18 @@
             <div class="row  box boxshadow" style="width:100%;">
                 <div class="col-md-12">
 
-                    <h3 class="w3l-title">Jobs</h3>
-                    <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="Search Clients" ng-model="searchClients">
-                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    <h3 class="w3l-title"><a href="#/admin-dashboard">Jobs</a></h3>
+                    <div>
+                        <div class="col-md-11 col-sm-12">
+                            <div class="form-group has-feedback">
+                                <input type="text" class="form-control" placeholder="Search Clients" ng-model="searchClients">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback pull-right">
+                            <select class="form-control" ng-model="statusOfJob" ng-options="status.name for status in statuses"></select>
+                        </div>
                     </div>
-
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -36,13 +48,12 @@
                                 <td>{{job.location}}</td>
                                 <td>{{job.componeyName}}</td>
                                 <td>{{job.status}}</td>
-                                <td><button type="button" class="btn btn-info" ng-click="GetSelectedJob(job)">View</button></td>
-                            </tr>
-                            
+                                <td><button type="button" class="btn btn-success" ng-click="GetSelectedJob(job)">Edit</button>
+                                | <button type="button" class="btn btn-primary" ng-click="JobInterview(job)">View</button></td>
+                            </tr>                            
                         </tbody>
-                    </table>
-                   
-                    <form>
+                    </table>                   
+                    <form ng-show="show">
                         <h3 class="w3l-title">{{description}}</h3>
                         <div class="form-group">
                             <label for="email">Catergorty</label>
@@ -72,14 +83,10 @@
                         <div class="form-group">
                             <label for="email">Status</label>
                             <input type="text" class="form-control" ng-model="status">
-                        </div>
-
-                      
+                        </div>                      
                         <button type="submit" class="btn btn-custom" ng-click="Update()">Update</button>
-                        <button type="submit" class="btn btn-custom" ng-click="Remove()">Remove</button>
-
-                     
-                    </form>
+                        <button type="submit" class="btn btn-custom" ng-click="Remove()">Remove</button>                     
+                    </form>                    
                 </div>
               
 
