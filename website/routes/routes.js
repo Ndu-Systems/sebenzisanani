@@ -22,9 +22,9 @@
                 templateUrl: 'pages/account/companyRegister.html',
                 controller: 'companyRegisterController'
             })
-            .when('/candidateLanding', {
-                templateUrl: 'pages/recruitment/candidateLanding.html',
-                controller: 'recruitmentController'
+            .when('/Job-Offers', {
+                templateUrl: 'pages/candidate/jobs.html',
+                controller: 'landingController'
             })
             .when('/companyLanding', {
                   templateUrl: 'pages/recruitment/companyLanding.html',

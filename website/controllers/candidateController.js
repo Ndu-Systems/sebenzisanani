@@ -191,6 +191,6 @@ app.controller('updateCVController', function ($http, $scope, $window) {
 
 
 });
-app.controller('candidate1Controller', function ($http, $scope, $window) {
+app.controller('landingController', function ($http, $scope, $window) {
     
 });
