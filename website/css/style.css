@@ -43,7 +43,7 @@ body a:focus, a:hover {
  .myslider2 {
                     background-image: url("../images/b2.PNG");
                     /* Set a specific height */
-                    min-height: 500px;
+                    min-height: 300px;
                     /* Create the parallax scrolling effect */
                     background-attachment: fixed;
                     background-position: center;

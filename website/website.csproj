@@ -211,6 +211,7 @@
     <Content Include="pages\admin\login.html" />
     <Content Include="pages\candidate\candidate.html" />
     <Content Include="pages\candidate\dash.html" />
+    <Content Include="pages\candidate\job.html" />
     <Content Include="pages\candidate\jobs.html" />
     <Content Include="pages\candidate\updateCV.html" />
     <Content Include="pages\candidate\updateCandidate.html" />

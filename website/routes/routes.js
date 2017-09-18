@@ -106,4 +106,8 @@
          templateUrl: 'pages/candidate/dash.html',
          controller: 'candidateController'
      })
+     .when('/Job-Details', {
+         templateUrl: 'pages/candidate/job.html',
+         controller: 'jobDetailsController'
+     })
 });

@@ -192,5 +192,60 @@ app.controller('updateCVController', function ($http, $scope, $window) {
 
 });
 app.controller('landingController', function ($http, $scope, $window) {
-    
+    // get  jobs
+    var data = {
+        table: "job",
+        condition: " 1"
+    };
+    $http.post(GetApiUrl("get"), data)
+    .success(function (response, status) {
+        if (response.data !== undefined) {
+            $scope.openJobs = response.data;
+            $scope.JobsCount = $scope.openJobs.length;
+        } else {
+            $scope.JobsCount = 0;
+        }
+    });
+
+    $scope.GetJob = function (job) {
+        var jobSelectedJob = {
+            id: job.id,
+            catergorty: job.catergorty,
+            description: job.description,
+            expirience: job.expirience,
+            comment: job.comment,
+            componeyId: job.componeyId,
+            positions: job.positions,
+            status: job.status,
+            location: job.location,
+            componeyName: job.componeyName,
+            date: job.date
+        };
+        localStorage.setItem("jobSelectedJob", JSON.stringify(jobSelectedJob));
+        $window.location.href = "#Job-Details";
+    }
+
 });
+app.controller('jobDetailsController', function ($http, $scope, $window) {
+   
+    $scope.job = JSON.parse(localStorage.getItem("jobSelectedJob"));
+   
+    $scope.id = $scope.job.id;
+    $scope.catergorty = $scope.job.catergorty;
+    $scope.description = $scope.job.description;
+    $scope.expirience = $scope.job.expirience;
+    $scope.comment = $scope.job.comment;
+    $scope.componeyId = $scope.job.componeyId;
+    $scope.positions = $scope.job.positions;
+    $scope.status = $scope.job.status;
+    $scope.location = $scope.job.location;
+    $scope.componeyName = $scope.job.componeyName;
+    $scope.date = $scope.job.date;
+
+    // apply
+
+    $scope.Appy = function () {
+
+    }
+});
+

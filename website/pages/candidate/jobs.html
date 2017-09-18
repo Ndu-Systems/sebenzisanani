@@ -1,7 +1,7 @@
 ﻿<!--Top section-->
 <div class="myslider2">
     <div class="innerTextSlider2">
-        <h2 style="text-transform:uppercase">Hi {{name}} <a href="#/logout">Log-out</a> </h2>
+        <h2 style="text-transform:uppercase">Job Offers <font color="green">{{JobsCount}}</font>  </h2>
 
 
 
@@ -11,15 +11,29 @@
 <div class="wthree-main-content">
     <div class="container">
         <div class="clearfix"></div>
-        <h3 class="w3l-title">Dashboard</h3>
         <div class="container box boxshadow">
-            <div class="row">
-          
-                <button type="submit" class="btn btn-custom">Update</button>
-
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="Search by Company, Job Title or Location" ng-model="searchJobs">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
             </div>
-
-
+            <div class="panel-group">
+                <div class="panel panel-info" ng-repeat="job in openJobs  | filter:searchJobs">
+                    <div class="panel-heading"><h4>{{job.description}}</h4></div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <b>{{job.componeyName}}</b> <br>
+                                {{job.location}}
+                            </div>
+                            <div class="col-sm-4">
+                                {{job.date}}
+                            </div>
+                                <div class="col-sm-2" style="text-align:right"><button type="button" ng-click="GetJob(job)" class="btn btn-info">Read More...</button></div>
+                            </div>
+                    </div>
+                </div>
+               
+            </div>
 
         </div>
 
