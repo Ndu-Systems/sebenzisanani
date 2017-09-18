@@ -110,4 +110,8 @@
          templateUrl: 'pages/candidate/job.html',
          controller: 'jobDetailsController'
      })
+      .when('/Apply', {
+          templateUrl: 'pages/candidate/apply.html',
+          controller: 'applyController'
+      })
 });
