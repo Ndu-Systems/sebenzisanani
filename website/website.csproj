@@ -205,6 +205,7 @@
     <Content Include="pages\account\register.html" />
     <Content Include="pages\account\registerCandidate.html" />
     <Content Include="pages\admin\candidates.html" />
+    <Content Include="pages\admin\LinkToInterview.html" />
     <Content Include="pages\admin\vacances.html" />
     <Content Include="pages\admin\clients.html" />
     <Content Include="pages\admin\dash.html" />
