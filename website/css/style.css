@@ -20,6 +20,7 @@ body a {
 	-ms-transition:0.5s all;
 	text-decoration: none;
 }
+
 body a:hover {
 	text-decoration: none;
 }

@@ -221,7 +221,9 @@
     <Content Include="pages\candidate\jobs.html" />
     <Content Include="pages\candidate\updateCV.html" />
     <Content Include="pages\candidate\updateCandidate.html" />
+    <Content Include="pages\company\candidateEnquiry.html" />
     <Content Include="pages\company\company.html" />
+    <Content Include="pages\company\candidates.html" />
     <Content Include="pages\company\openjob.html" />
     <Content Include="pages\company\postjob.html" />
     <Content Include="pages\Home\about.html" />

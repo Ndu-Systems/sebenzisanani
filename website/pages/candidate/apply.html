@@ -15,10 +15,9 @@
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
         <a href="#/Job-Details"> {{description}} </a>
 
-        <div class="clearfix"></div>
-        <div class="container box boxshadow">
-            <div class="row  box boxshadow" style="width:50%;margin-left: 26%;    margin-top:0 ">
-                <div class="col-md-12">
+
+            <div class="row  box boxshadow" style="width:100%;">
+                <div class="col-md-4">
 
                     <h3 class="w3l-title">User Login</h3>
                     <div class="form-group has-feedback">
@@ -33,48 +32,31 @@
                     <button type="submit" class="btn btn-custom" ng-click="LoginToAppy()">LOGIN</button>
                     <br><br><br>
                     <p style="float:right">Don't have an account? <a href="/#Register-With-Us">sign up</a></p>
-                    <p style="color:red">{{message}}</p>
+                    <p style="color:red">{{message2}}</p>
 
                 </div>
-
-
-            </div>
-
-            <div class="row  box boxshadow" style="width:50%;margin-left: 26%;    margin-top:0 ">
-                <div class="col-md-12">
-
-                    <h3 class="w3l-title">OR<br><br>Leave your details we weill call you</h3>
-                    <div class="form-group has-feedback">
-                        <input type="email" class="form-control" placeholder="Email Address" ng-model="contact_email">
-                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="Cell Number" ng-model="contact_cell">
-                        <span class="glyphicon glyphicon-phone form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="Name" ng-model="contact_name">
-                        <span class="glyphicon glyphicon-align-justify form-control-feedback"></span>
-                    </div>
-                    <button type="submit" class="btn btn-custom" ng-click="Contact_Save()">Save</button>
-                    <br><br><br>
-                    <p style="float:right">Don't have an account? <a href="#companyRegister">sign up</a></p>
-                    <p style="color:red">{{message}}</p>
-
-                </div> 
-
-            </div>
-
-            <div class="row  box boxshadow" style="width:50%;margin-left: 26%;    margin-top:0 ">
-                <div class="col-md-12">
-
-                    <h3 class="w3l-title">OR<br><br>Click the button bellow to register</h3>
-                   <a href="/#Register-With-Us"> <button type="submit" class="btn btn-custom" >Register</button></a>
-                    <br><br><br>
-                    
+                <div class="col-md-2">
+                    <h3 class="w3l-title">OR</h3>
                 </div>
+                    <div class="col-md-4">
+                        <h3 class="w3l-title">Leave your details we weill call you</h3>
+                        <div class="form-group has-feedback">
+                            <input type="email" class="form-control" placeholder="Email Address" ng-model="contact_email">
+                            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="Cell Number" ng-model="contact_cell">
+                            <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="Name" ng-model="contact_name">
+                            <span class="glyphicon glyphicon-align-justify form-control-feedback"></span>
+                        </div>
+                        <button type="submit" class="btn btn-custom" ng-click="Contact_Save()">Save</button>
+                        <br><br><br>
+                  
+                        <p style="color:red">{{message}}</p>
 
-                <div class="clearfix"></div>
-            </div>
-    </div>
-</div>
+                    </div>
+
+                </div>

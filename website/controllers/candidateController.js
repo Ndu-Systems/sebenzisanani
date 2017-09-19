@@ -195,7 +195,7 @@ app.controller('landingController', function ($http, $scope, $window) {
     // get  jobs
     var data = {
         table: "job",
-        condition: " 1"
+        condition: " status = 'Open'"
     };
     $http.post(GetApiUrl("get"), data)
     .success(function (response, status) {
@@ -277,7 +277,7 @@ app.controller('applyController', function ($http, $scope, $window) {
 
     $scope.LoginToAppy = function () {
        
-        $scope.message = undefined;
+        $scope.message2 = undefined;
         var email = $scope.email;
         var password = $scope.password;
         if (email !== undefined) {
@@ -300,14 +300,14 @@ app.controller('applyController', function ($http, $scope, $window) {
                     AppyData($scope.id, user.id);
                    
 
-                    me.message = undefined;
+                    me.message2 = undefined;
                 }
                 else {
-                    $scope.message = "Your login credentials were not correct, please try again.";
+                    $scope.message2 = "Your login credentials were not correct, please try again.";
                 }
             });
         } else {
-            $scope.message = "Email is invalid!";
+            $scope.message2 = "Email is invalid!";
         }
     };
 

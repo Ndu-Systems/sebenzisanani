@@ -118,4 +118,12 @@
         templateUrl: 'pages/admin/LinkToInterview.html',
         controller: 'linkToInterviewtController'
     })
+     .when('/Our-Candidates', {
+         templateUrl: 'pages/company/candidates.html',
+         controller: 'landingCompanyController'
+     })
+     .when('/Enquiry-Candidate', {
+         templateUrl: 'pages/company/candidateEnquiry.html',
+         controller: 'candidateEnquiryController'
+     })
 });

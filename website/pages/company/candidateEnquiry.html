@@ -1,0 +1,64 @@
+﻿<!--Top section-->
+<div class="myslider2">
+    <div class="innerTextSlider2">
+        <h2 style="text-transform:uppercase">Enquiry for :  {{jobDescription}} </h2>
+    </div>
+</div>
+<!--END Top section-->
+<div class="wthree-main-content">
+    <div class="container">
+        <a href="#/"> Home</a>
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+        <a href="#/Our-Candidates"> All Candidates </a>
+       
+
+        <div class="clearfix"></div>
+            <div class="row  box boxshadow" style="width:100%; ">
+                <div class="col-md-4">
+
+                    <h3 class="w3l-title">User Login</h3>
+                    <div class="form-group has-feedback">
+                        <input type="email" class="form-control" placeholder="Email Address" ng-model="email">
+                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                    </div>
+
+                    <div class="form-group has-feedback">
+                        <input type="password" class="form-control" placeholder="Password" ng-model="password">
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    </div>
+                    <button type="submit" class="btn btn-custom" ng-click="LoginToAppy()">LOGIN</button>
+                    <br><br><br>
+                    <p style="float:right">Don't have an account? <a href="/#companyRegister">sign up</a></p>
+                    <p style="color:red">{{message2}}</p>
+
+                </div>
+
+                <div class="col-md-2"><h3 class="w3l-title">OR</h3> </div>
+
+                <div class="col-md-4">
+
+
+                    <h3 class="w3l-title">Leave your details</h3>
+                    <div class="form-group has-feedback">
+                        <input type="email" class="form-control" placeholder="Email Address" ng-model="contact_email">
+                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <input type="text" class="form-control" placeholder="Cell Number" ng-model="contact_cell">
+                        <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <input type="text" class="form-control" placeholder="Name" ng-model="contact_name">
+                        <span class="glyphicon glyphicon-align-justify form-control-feedback"></span>
+                    </div>
+                    <button type="submit" class="btn btn-custom" ng-click="Contact_Save()">Save</button>
+                    <br><br><br>
+                 
+                    <p style="color:red">{{message}}</p>
+
+                </div>
+                </div>
+
+ 
+</div>
