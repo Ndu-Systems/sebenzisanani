@@ -45,24 +45,23 @@
 
                     <h3 class="w3l-title">OR<br><br>Leave your details we weill call you</h3>
                     <div class="form-group has-feedback">
-                        <input type="email" class="form-control" placeholder="Email Address" ng-model="email">
+                        <input type="email" class="form-control" placeholder="Email Address" ng-model="contact_email">
                         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="Cell Number" ng-model="cell">
+                        <input type="text" class="form-control" placeholder="Cell Number" ng-model="contact_cell">
                         <span class="glyphicon glyphicon-phone form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="Name" ng-model="name">
+                        <input type="text" class="form-control" placeholder="Name" ng-model="contact_name">
                         <span class="glyphicon glyphicon-align-justify form-control-feedback"></span>
                     </div>
-                    <button type="submit" class="btn btn-custom" ng-click="Save()">Save</button>
+                    <button type="submit" class="btn btn-custom" ng-click="Contact_Save()">Save</button>
                     <br><br><br>
                     <p style="float:right">Don't have an account? <a href="#companyRegister">sign up</a></p>
                     <p style="color:red">{{message}}</p>
 
-                </div>
-
+                </div> 
 
             </div>
 

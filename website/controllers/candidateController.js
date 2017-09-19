@@ -270,7 +270,8 @@ app.controller('applyController', function ($http, $scope, $window) {
     //check if user is logged in aready
     if (localStorage.getItem("isCandidateLoggedIn") === "true") {
         AppyData($scope.id, localStorage.getItem("candidate_id"));
-     
+        SendMail(admin_email, localStorage.getItem("candidate_name") + " are interested in job opportunity " + $scope.description + " Email " + localStorage.getItem("candidate_email") + " Cell " + localStorage.getItem("candidate_cell"), "Admin", "New job application", "application@sebenzisane.co.za");
+
     }
     // end check 
 
@@ -292,8 +293,9 @@ app.controller('applyController', function ($http, $scope, $window) {
                     localStorage.setItem("candidate_name", user.name);
                     localStorage.setItem("candidate_id", user.id);
                     localStorage.setItem("candidate_identity", user.identity);
-                    email: localStorage.setItem("candidate_email", user.email);
+                    localStorage.setItem("candidate_email", user.email);
                     localStorage.setItem("candidate_cv", user.cv);
+                    localStorage.setItem("candidate_cell", user.cell);
                     localStorage.setItem("isCandidateLoggedIn", true);
                     AppyData($scope.id, user.id);
                    
@@ -306,6 +308,36 @@ app.controller('applyController', function ($http, $scope, $window) {
             });
         } else {
             $scope.message = "Email is invalid!";
+        }
+    };
+
+    $scope.Contact_Save = function () {              
+        var  contact_email = $scope.contact_email; 
+        var contact_cell = $scope.contact_cell;
+        var contact_name = $scope.contact_name;
+        if (contact_email === undefined) {
+            $scope.message = "Enter valid email address";
+        } else if (contact_cell === undefined) {
+            $scope.message = "Enter valid cell number ";
+        } else if (contact_name === undefined) {
+            $scope.message = "Please tell us your name ";
+        } else {
+            // save info 
+            var data = {
+                email:contact_email,
+                cell :contact_cell,
+                name: contact_name,
+                type: "Candidate"
+            };
+
+            $http.post(GetApiUrl("Contact_Save"), data)
+                      .success(function (response, status) {
+                          SendMail(admin_email, $scope.contact_name + " are interested in job opportunity " + $scope.description + " Email " + contact_email + " Cell " + contact_cell, "Admin", "New job application", "application@sebenzisane.co.za");
+                          // seuccess
+                          localStorage.setItem("succes", response);
+                          localStorage.setItem("url", "#Job-Offers");
+                          $window.location.href = "#succes";
+                    });
         }
     };
 
@@ -327,5 +359,23 @@ app.controller('applyController', function ($http, $scope, $window) {
 
         }
     
+    function SendMail(send_to, message, name_to, subject, from_from) {
+        var emailObj = {
+            email: send_to,
+            body: message,
+            name: name_to,
+            subject: subject,
+            from: from_from
+        };
+        $http.post("http://ndu-systems.net/Api/email.php", emailObj)
+       .success(function (response) {
+           console.log(response);
+       })
+    .error(function (error) {
+        console.error(error);
+    });
+
+        // End Send Email
+    }
 });
 

@@ -96,6 +96,7 @@ app.controller('candidateLoginController', function ($http, $scope, $window) {
                 email: localStorage.setItem("candidate_email", user.email);
                 localStorage.setItem("candidate_cv", user.cv);
                 localStorage.setItem("isCandidateLoggedIn", true);
+                localStorage.setItem("candidate_cell", user.cell);
                 $window.location.href = "#Candidate-Dashboard";
               
                 
