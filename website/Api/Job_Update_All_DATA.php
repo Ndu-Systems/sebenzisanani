@@ -19,7 +19,7 @@ if (isset($data->email) ){
    $expirience         = $data->expirience;
    $cv                 = $data->cv;
    $city 				= $data->city;
-$id			= $data->id;
+	$id			= $data->id;
 
         $sql = "UPDATE candidate 
 		SET name='$name', email='$email',cell= $cell, identity='$identity',title= '$title', 

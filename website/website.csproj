@@ -94,6 +94,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Api\Contact_Save.php" />
+    <Content Include="Api\Job_Apply.php" />
+    <Content Include="Api\sebenza.sql" />
     <Content Include="controllers\accountController.js" />
     <Content Include="controllers\adminController.js" />
     <Content Include="controllers\candidateController.js" />
