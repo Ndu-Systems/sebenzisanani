@@ -245,11 +245,11 @@ app.controller('jobDetailsController', function ($http, $scope, $window) {
 
     $scope.Appy = function () {
         $window.location.href = "#Apply";
-        if (localStorage.getItem("isCandidateLoggedIn") === "true") {
-            $window.location.href = "#candidateLogin";
-        } else {
+        //if (localStorage.getItem("isCandidateLoggedIn") === "true") {
+        //    $window.location.href = "#candidateLogin";
+        //} else {
 
-        }
+        //}
     }
 });
 app.controller('applyController', function ($http, $scope, $window) {
@@ -267,8 +267,15 @@ app.controller('applyController', function ($http, $scope, $window) {
     $scope.location = $scope.job.location;
     $scope.componeyName = $scope.job.componeyName;
     $scope.date = $scope.job.date;
+    //check if user is logged in aready
+    if (localStorage.getItem("isCandidateLoggedIn") === "true") {
+        AppyData($scope.id, localStorage.getItem("candidate_id"));
+     
+    }
+    // end check 
 
-    $scope.Login = function () {
+    $scope.LoginToAppy = function () {
+       
         $scope.message = undefined;
         var email = $scope.email;
         var password = $scope.password;
@@ -288,10 +295,8 @@ app.controller('applyController', function ($http, $scope, $window) {
                     email: localStorage.setItem("candidate_email", user.email);
                     localStorage.setItem("candidate_cv", user.cv);
                     localStorage.setItem("isCandidateLoggedIn", true);
-                    // seuccess
-                    localStorage.setItem("succes", "You Application was sent, We will contact you as soon as possible");
-                    localStorage.setItem("url", "#Candidate-Dashboard");
-                    $window.location.href = "#succes";
+                    AppyData($scope.id, user.id);
+                   
 
                     me.message = undefined;
                 }
@@ -303,5 +308,24 @@ app.controller('applyController', function ($http, $scope, $window) {
             $scope.message = "Email is invalid!";
         }
     };
+
+    function AppyData(jobId, candidateId) {
+     
+            var data = {
+                jobId: jobId,
+                candidateId: candidateId,
+                status : "New"
+            };
+
+            $http.post(GetApiUrl("Job_Apply"), data)
+            .success(function (response, status) {
+                // seuccess
+                localStorage.setItem("succes", response);
+                localStorage.setItem("url", "#Candidate-Dashboard");
+                $window.location.href = "#succes";
+            });
+
+        }
+    
 });
 
