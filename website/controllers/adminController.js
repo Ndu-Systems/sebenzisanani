@@ -212,7 +212,7 @@ app.controller('vacancesController', function ($http, $scope, $window) {
         }
     });
     $scope.show = false;
-   
+    $scope.showTable = true;
     // selected client
     $scope.GetSelectedJob = function (job) {       
         $scope.catergorty = job.catergorty;
@@ -222,9 +222,11 @@ app.controller('vacancesController', function ($http, $scope, $window) {
         $scope.positions = job.positions;
         $scope.location = job.location;
         $scope.componeyName = job.componeyName;
+        $scope.componeyId = job.componeyId;
         $scope.status = job.status;
         $scope.id = job.id;       
         $scope.show = true;
+        $scope.showTable = false;
     };
 
     $scope.JobInterview = function (job) {
@@ -235,7 +237,7 @@ app.controller('vacancesController', function ($http, $scope, $window) {
         localStorage.setItem("positions", job.positions);
         localStorage.setItem("location", job.location);
         localStorage.setItem("componeyName", job.componeyName);
-        localStorage.setItem("componeyName", job.componeyName);
+        localStorage.setItem("componeyId", job.componeyId);
         localStorage.setItem("status", job.status);
         localStorage.setItem("id", job.id);
         $scope.show = false;

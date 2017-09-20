@@ -16,7 +16,7 @@
                     <div>
                         <div class="col-md-11 col-sm-12">
                             <div class="form-group has-feedback">
-                                <input type="text" class="form-control" placeholder="Search Clients" ng-model="searchClients">
+                                <input type="text" class="form-control" placeholder="Search Jobs" ng-model="searchClients">
                                 <span class="glyphicon glyphicon-search form-control-feedback"></span>
                             </div>
                         </div>
@@ -24,7 +24,7 @@
                             <select class="form-control" ng-model="statusOfJob" ng-options="status.name for status in statuses"></select>
                         </div>
                     </div>
-                    <table class="table table-bordered">
+                    <table class="table table-bordered" ng-show="showTable">
                         <thead>
                             <tr>
                                 <th>Catergorty</th>

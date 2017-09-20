@@ -4,20 +4,53 @@
             <div class="clearfix"></div>
             <div class="row  box boxshadow" style="width:100%;">
                 <div class="col-md-12">
-                    <h3 class="w3l-title">Link To Interview</h3>
+                    <h3 class="w3l-title"><a href="#/admin-dashboard">Link To Interview</a></h3>
                     <div class="form-group has-feedback">
                         <input type="text" class="form-control" placeholder="Search Job" ng-model="searchClients">
                         <span class="glyphicon glyphicon-search form-control-feedback"></span>
                     </div>
-                    <table class="table table-bordered">
-                     
-                    </table>
-                    <form> 
-                                           
-
-                        <button type="submit" class="btn btn-custom" ng-click="Update()">Update</button>
-                        <button type="submit" class="btn btn-custom" ng-click="Remove()">Remove</button>
-                    </form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div style="background-color:dodgerblue; color:white">
+                                <div class="pull-left">
+                                    <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+                                        <a href="#/linkToInterview" class="hi-icon icon"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <h2>{{description}}</h2>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div>
+                                    <h2>Positions Required: <p class="pull-right">{{positions}}</p></h2>
+                                </div>
+                                <div class="clearfix"></div><br/>
+                                <div>
+                                    <h2>Positions Filled: <p class="pull-right">0</p></h2>
+                                </div>
+                            </div>
+                         </div>
+                        <div class="col-md-6">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Job Title</th>
+                                        <th>Expirience</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="candidate in candidates | filter:searchClients">
+                                        <td>{{candidate.name}} {{candidate.surname}}</td>
+                                        <td>{{candidate.jobDescription}}</td>
+                                        <td>{{candidate.expirience}}</td>
+                                        <td><a href="{{candidate.cv}}" target="_blank">View</a></td>                                    
+                                        <td><button type="button" class="btn btn-success" ng-click="Assign(candidate)">Assign</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

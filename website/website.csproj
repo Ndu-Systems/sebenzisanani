@@ -95,7 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Api\Contact_Save.php" />
-    <Content Include="Api\Job_Apply.php" />
+    <Content Include="Api\Job_Apply.php">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Api\sebenza.sql" />
     <Content Include="controllers\accountController.js" />
     <Content Include="controllers\adminController.js" />
@@ -128,7 +130,9 @@
     <Content Include="Api\Candidate_Update.php" />
     <Content Include="Api\Company_Add.php" />
     <Content Include="Api\Company_Add_Job.php" />
-    <Content Include="Api\Company_Update.php" />
+    <Content Include="Api\Company_Update.php">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Api\conn.php" />
     <Content Include="Api\error_log" />
     <Content Include="Api\get.php" />
@@ -145,6 +149,8 @@
     <Content Include="Api\uploads\1505402997Ndumiso Mthembu CV.docx" />
     <Content Include="Api\uploads\1505409434AwethuCV.docx" />
     <Content Include="Api\Job_SelectAllForCompany.php" />
+    <Content Include="Api\Interview_candidates.php" />
+    <Content Include="Api\Interview_assign.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
