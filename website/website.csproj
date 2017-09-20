@@ -107,6 +107,7 @@
     <Content Include="images\b2.PNG" />
     <Content Include="images\logoq.PNG" />
     <Content Include="images\q.PNG" />
+    <Content Include="images\sebenza_bg.PNG" />
     <Content Include="js\emails.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">

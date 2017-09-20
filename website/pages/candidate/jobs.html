@@ -23,10 +23,13 @@
                         <div class="row">
                             <div class="col-sm-6">
                             <b>{{job.componeyName}}</b> <br>
-                                {{job.location}}
+                                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  {{job.location}}
+                                <br>
+                              
+                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>  {{job.date}}
                             </div>
                             <div class="col-sm-4">
-                                {{job.date}}
+                                {{job.comment}}
                             </div>
                                 <div class="col-sm-2" style="text-align:right"><button type="button" ng-click="GetJob(job)" class="btn btn-info">Read More...</button></div>
                             </div>
